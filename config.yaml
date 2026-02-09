@@ -1,0 +1,40 @@
+training:
+  # --- Twoje dotychczasowe eksperymenty ---
+  baseline:
+    enabled: false
+    epochs: 90
+  weighted:
+    enabled: false
+    epochs: 150
+  pro:
+    enabled: false
+    epochs: 250
+  expert:
+    enabled: true
+    epochs: 200
+  rotnet:
+    enabled: false
+    epochs: 150
+  hybrid:
+    enabled: false
+    epochs: 150
+
+
+  loss_comparison:
+    enabled: false
+    epochs: 100
+    learning_rate: 0.1
+    momentum: 0.9
+    weight_decay: 0.0005
+    
+    focal:
+      gamma: 2.0
+      alpha: 1.0
+    ldam:
+      max_m: 0.5
+      s: 30
+
+data:
+  batch_size: 128
+  majority_class: 3
+  minority_ratio: 0.03
